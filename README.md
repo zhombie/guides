@@ -1,19 +1,33 @@
-# instructions
+# Instructions
 
 ---
 
-## linux
+## Linux
 
 ### 1. sudo command without password prompt configuration:
 
-* firstly, change sudoers configuration. in order to change configurations, enter sudoers configuration file by:
+* Firstly, change sudoers configuration. in order to change configurations, enter sudoers configuration file by:
 ```
 sudo visudo
 ```
 
-* add following line at the bottom, in order to make **journalctl** usage without password prompt for **sampleuser**:
+* Add following line at the bottom, in order to make **journalctl** usage without password prompt for **sampleuser**:
 ```
 sampleuser ALL = (root) NOPASSWD: /bin/journalctl
+```
+
+### 2. Calculate script execution time (tested on python script):
+
+* Simple example:
+
+```
+time python <script-name>.py
+```
+
+* If you have Pipenv environment:
+
+```
+time pipenv run python <script-name>.py
 ```
 
 ---
@@ -22,7 +36,7 @@ sampleuser ALL = (root) NOPASSWD: /bin/journalctl
 
 ### 1. ssh connection without password prompt
 
-* add your computer ssh key to ```~/.ssh/autorized_keys``` by entering locally:
+* Add your computer ssh key to ```~/.ssh/autorized_keys``` by entering locally:
 
 if you already have known hostname in ssh configuration enter:
 
@@ -36,7 +50,7 @@ where, ```~/.ssh/id_rsa.pub``` is ssh public key on your local computer. second 
 
 ### 2. ssh chain tunnel
 
-> means remote server, that you really need is only accessible from another remote server. there is no limit on ssh server jumps
+> Means remote server, that you really need is only accessible from another remote server. there is no limit on ssh server jumps
 
 ```
 Host remote-server1
