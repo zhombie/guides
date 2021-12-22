@@ -68,3 +68,12 @@ Host remote-server2
 above ssh configuration shows us that we can connect directly to remote-server2 by ```ssh remote-server2``` simple command & ssh can decide that it has to connect firstly **remote-server1** and then connect to **remote-server2** on its own. all this work is done by attribute **ProxyJump**.
 
 also there is another feature that provides ssh, which forwards network traffic by **LocalForward** attribute. it means, that all data sent to port 25555 will be sent to remote server.
+
+
+## scp
+
+### 1. Download file from remote server
+
+```
+scp user@127.0.0.1:~/path/to/file.extension /path/to/target/output/directory/
+```
