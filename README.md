@@ -69,6 +69,12 @@ above ssh configuration shows us that we can connect directly to remote-server2 
 
 also there is another feature that provides ssh, which forwards network traffic by **LocalForward** attribute. it means, that all data sent to port 25555 will be sent to remote server.
 
+### 3. ssh cleanup branches
+
+```
+git fetch -p && git branch -vv | awk '/: gone]/{print $1}' | xargs git branch -d
+```
+
 
 ## scp
 
