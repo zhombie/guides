@@ -40,11 +40,11 @@ time pipenv run python <script-name>.py
 
 if you already have known hostname in ssh configuration enter:
 
-```ssh-copy-id -i ~/.ssh/id_rsa.pub vlx```
+```ssh-copy-id -i ~/.ssh/id_rsa.pub <remote address>```
 
 if not:
 
-```ssh-copy-id -i ~/.ssh/id_rsa.pub today@vlx.kz -p 22```
+```ssh-copy-id -i ~/.ssh/id_rsa.pub root@<remote address> -p 22```
 
 where, ```~/.ssh/id_rsa.pub``` is ssh public key on your local computer. second argument is ssh connection.
 
