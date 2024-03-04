@@ -75,6 +75,11 @@ also there is another feature that provides ssh, which forwards network traffic 
 git fetch -p && git branch -vv | awk '/: gone]/{print $1}' | xargs git branch -d
 ```
 
+### 4. ssh port forwards
+
+![image](https://github.com/zhombie/guides/assets/26120169/0df83bf5-86c2-44bf-91ac-90989d8e9d8d)
+
+---
 
 ## scp
 
