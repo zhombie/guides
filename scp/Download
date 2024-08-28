@@ -1,0 +1,3 @@
+```
+scp user@127.0.0.1:~/path/to/file.extension /path/to/target/output/directory/
+```
