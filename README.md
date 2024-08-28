@@ -36,10 +36,4 @@ time pipenv run python <script-name>.py
 
 ---
 
-## scp
-
-### 1. Download file from remote server
-
-```
-scp user@127.0.0.1:~/path/to/file.extension /path/to/target/output/directory/
-```
+## [scp](scp)
