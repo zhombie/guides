@@ -1,3 +1,31 @@
+Packages
+
+```
+dnf update
+```
+
+```
+dnf install epel-release
+```
+
+```
+dnf install coturn
+```
+
+Setup
+
+```
+mv /etc/coturn/turnserver.conf /etc/coturn/turnserver.conf.bak
+```
+
+```
+systemctl enable coturn
+```
+
+```
+systemctl start coturn
+```
+
 Firewall
 
 ```
