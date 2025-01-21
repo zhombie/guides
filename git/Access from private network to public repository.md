@@ -5,7 +5,7 @@
 Host remove-vm
   HostName 192.168.200.10
   User root
-  RemoteForward 222 git.jetbrains.space:22
+  RemoteForward 2222 git.jetbrains.space:22
 ```
 
 ### Remote machine
@@ -25,7 +25,7 @@ nano ~/.ssh/config
 Host git.jetbrains.space
   HostName git.jetbrains.space
   User git
-  Port 222
+  Port 2222
 ```
 
 3) Copy ssh public key & add to profile
