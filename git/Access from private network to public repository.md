@@ -33,3 +33,13 @@ Host git.jetbrains.space
 ```
 cat ~/.ssh/id_ed25519.pub
 ```
+
+4) Setup /etc/hosts
+
+```
+nano /etc/hosts
+```
+
+```
+127.0.0.1   git.jetbrains.space
+```
