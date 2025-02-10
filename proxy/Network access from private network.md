@@ -2,7 +2,11 @@
 
 1) Download Squid
 
+a) Windows:
 Example: https://squid.diladele.com/
+
+b) MacOS:
+Example: https://formulae.brew.sh/formula/squid
 
 2) Launch Squid
 
