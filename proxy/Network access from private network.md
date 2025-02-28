@@ -51,3 +51,20 @@ nano /etc/yum.conf
 ```
 proxy=http://127.0.0.1:3128
 ```
+
+3) Reconfigure python pip proxy
+
+```
+nano /etc/pip.conf
+```
+
+```
+# /etc/pip.conf
+[global]
+trusted-host = pypi.python.org
+               pypi.org
+               pypi.pkg.jetbrains.space
+               files.pythonhosted.org
+               cloudfront.net;
+proxy = http://127.0.0.1:3128
+```
