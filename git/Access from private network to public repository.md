@@ -2,7 +2,7 @@
 
 1) Add configuration for remote-vm with RemoteForward
 ```
-Host remove-vm
+Host remote-vm
   HostName 192.168.200.10
   User root
   RemoteForward 2222 git.jetbrains.space:22
