@@ -19,11 +19,7 @@ mv /etc/coturn/turnserver.conf /etc/coturn/turnserver.conf.bak
 ```
 
 ```
-systemctl enable coturn
-```
-
-```
-systemctl start coturn
+systemctl enable --now coturn
 ```
 
 Firewall
