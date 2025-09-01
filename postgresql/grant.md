@@ -22,11 +22,26 @@ JOIN pg_roles r ON am.roleid = r.oid
 JOIN pg_roles m ON am.member = m.oid WHERE m.rolname = 'test';
 ```
 
-```
+```sql
 grant usage on schema public to test;
+```
+
+```sql
 grant select on public.table1 to test;
+```
+
+```sql
 grant select on public.table2 to test;
+```
+
+```sql
 grant select on public.table3 to test;
+```
+
+```sql
 grant select on public.table4 to test;
+```
+
+```sql
 grant select on public.table5 to test;
 ```
