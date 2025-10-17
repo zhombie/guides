@@ -38,7 +38,7 @@ cp /etc/redis/redis.conf /etc/redis/redis.conf.bak
 bind 127.0.0.1 <internal ip address>
 maxmemory 6gb
 maxmemory-policy allkeys-lru
-requirepass qbox
+requirepass foobared
 appendonly yes
 save 900 1
 save 300 10
