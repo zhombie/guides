@@ -1,11 +1,16 @@
 ## Remote machine
 
-1) Connect
+1) Install
+```
+dnf install nc
+```
+
+3) Connect
 ```
 nc -u -l 55000
 ```
 
-2) Wait for message
+3) Wait for message
 
 # Local machine
 
