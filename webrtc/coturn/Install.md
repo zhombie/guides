@@ -15,7 +15,7 @@ dnf install coturn
 Setup
 
 ```
-mv /etc/coturn/turnserver.conf /etc/coturn/turnserver.conf.bak
+cp /etc/coturn/turnserver.conf /etc/coturn/turnserver.conf.bak
 ```
 
 ```
