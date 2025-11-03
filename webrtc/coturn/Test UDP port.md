@@ -1,4 +1,4 @@
-## Remote machine
+# Remote machine
 
 1) Install
 ```
