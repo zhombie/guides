@@ -1,3 +1,5 @@
+# Install repo
+
 ```
 sudo tee /etc/yum.repos.d/mongodb-org-8.2.repo <<'EOF'
 [mongodb-org-8.2]
@@ -9,13 +11,21 @@ gpgkey=https://pgp.mongodb.com/server-8.0.asc
 EOF
 ```
 
+# Install MongoDB Community edition
+
 ```
 dnf install -y mongodb-org
 ```
 
+# Backup `mongod.conf`
+
 ```
 cp /etc/mongod.conf /etc/mongod.conf.bak
 ```
+
+# SELinux configuration
+
+> If you want to install MongoDB into custom directory (for example, `/data/mongodb`)
 
 ```
 mv /var/lib/mongo /data/mongodb
@@ -40,10 +50,6 @@ make
 ```
 make install
 ```
-
-# SELinux configuration
-
-> If you want to install MongoDB into custom directory (for example, `/data/mongodb`)
 
 ```
 /usr/lib/python3.9/site-packages/
@@ -81,6 +87,8 @@ ls -Zd /data/mongodb
 ```
 sudo python3 -m pip install --upgrade setuptools
 ```
+
+# Start systemctl `mongod`
 
 ```
 sudo systemctl start mongod
