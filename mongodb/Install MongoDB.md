@@ -51,13 +51,7 @@ make
 make install
 ```
 
-```
-/usr/lib/python3.9/site-packages/
-```
-
-```
-/usr/local/lib/python3.9/site-packages/
-```
+> `setuptools` should be at `/usr/lib/python3.9/site-packages/`, not `/usr/local/lib/python3.9/site-packages/`
 
 ```
 sudo rm -rf /usr/local/lib/python3.9/site-packages/setuptools*
