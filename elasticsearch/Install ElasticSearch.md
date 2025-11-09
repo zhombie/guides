@@ -15,7 +15,7 @@ EOF
 ```
 
 ```
-sudo dnf install -y
+sudo dnf update -y
 ```
 
 ```
