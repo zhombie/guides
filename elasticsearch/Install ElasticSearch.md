@@ -19,5 +19,5 @@ sudo dnf update -y
 ```
 
 ```
-sudo dnf install -y elasticsearch
+sudo dnf install --enablerepo=elasticsearch elasticsearch
 ```
