@@ -59,7 +59,7 @@ sudo rm -rf /usr/local/lib/python3.9/site-packages/pkg_resources*
 ```
 
 ```
-sudo python3 -m pip install --force-reinstall "setuptools<70" --prefix=/usr --root-user-action
+sudo python3 -m pip install --force-reinstall "setuptools<70" --prefix=/usr --root-user-action ignore
 ```
 
 ```
