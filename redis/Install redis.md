@@ -65,6 +65,12 @@ save 60 10000
 mv /var/lib/redis /data/redis
 ```
 
+Edit `ReadWriteDirectories=` from `ReadWriteDirectories=-/var/lib/redis` to `ReadWriteDirectories=-/data/redis`
+
+```
+nano /usr/lib/systemd/system/redis.service
+```
+
 ```
 sudo rm -rf /usr/local/lib/python3.9/site-packages/setuptools*
 sudo rm -rf /usr/local/lib/python3.9/site-packages/pkg_resources*
