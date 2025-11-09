@@ -143,6 +143,18 @@ default_pass = <password>
 EOF
 ```
 
+> If you want to install RabbitMQ into custom directory (for example, `/data/rabbitmq`)
+
+```
+mv /var/lib/rabbitmq /data/rabbitmq
+```
+
+Edit `WorkingDirectory=` from `WorkingDirectory=-/var/lib/rabbitmq` to `WorkingDirectory=-/data/rabbitmq`
+
+```
+nano /usr/lib/systemd/system/rabbitmq-server.service
+```
+
 # Systemctl start `rabbitmq-server`
 
 ```
