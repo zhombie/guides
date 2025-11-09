@@ -72,6 +72,12 @@ nano /usr/lib/systemd/system/redis.service
 ```
 
 ```
+systemctl daemon-reload
+```
+
+# Downgrade setuptools
+
+```
 sudo rm -rf /usr/local/lib/python3.9/site-packages/setuptools*
 sudo rm -rf /usr/local/lib/python3.9/site-packages/pkg_resources*
 ```
@@ -95,6 +101,8 @@ sudo restorecon -R /data/redis
 ```
 ls -Zd /data/redis
 ```
+
+# Rollback setuptools
 
 ```
 sudo python3 -m pip install --upgrade setuptools
