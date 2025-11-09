@@ -1,4 +1,4 @@
-# RabbitMQ
+# Install repo
 
 ```
 rpm --import 'https://github.com/rabbitmq/signing-keys/releases/download/3.0/rabbitmq-release-signing-key.asc'
@@ -87,22 +87,35 @@ type=rpm-md
 EOF
 ```
 
+# Update packages
+
 ```
 dnf update -y
 ```
+
+# Install RabbitMQ
 
 ```
 dnf install -y logrotate erlang rabbitmq-server
 ```
 
+# Test
+
 ```
 erl -version
+```
+
+```
 rabbitmqctl version
 ```
+
+# Enable RabbitMQ Management
 
 ```
 rabbitmq-plugins enable rabbitmq_management
 ```
+
+# RabbitMQ configuration
 
 ```
 sudo tee /etc/rabbitmq/rabbitmq.conf <<'EOF'
@@ -130,6 +143,8 @@ default_pass = <password>
 EOF
 ```
 
+# Systemctl start `rabbitmq-server`
+
 ```
 systemctl enable --now rabbitmq-server
 ```
@@ -137,6 +152,8 @@ systemctl enable --now rabbitmq-server
 ```
 systemctl status rabbitmq-server
 ```
+
+# User management
 
 ```
 rabbitmqctl add_user <username> <password>
@@ -162,6 +179,8 @@ rabbitmqctl list_users
 rabbitmqctl delete_user guest
 ```
 
+# Logrotate configuration
+
 ```
 sudo tee /etc/logrotate.d/rabbitmq <<'EOF'
 /var/log/rabbitmq/*.log {
@@ -175,9 +194,13 @@ sudo tee /etc/logrotate.d/rabbitmq <<'EOF'
 EOF
 ```
 
+# Test
+
 ```
 rabbitmq-diagnostics status
 ```
+
+# Firewall configuration
 
 ```
 firewall-cmd --permanent --zone=public --add-rich-rule='rule family="ipv4" source address="<remote ip address>/32" port protocol="tcp" port="5672" accept'
