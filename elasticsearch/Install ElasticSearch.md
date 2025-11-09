@@ -1,3 +1,5 @@
+# ElasticSearch
+
 ```
 rpm --import https://artifacts.elastic.co/GPG-KEY-elasticsearch
 ```
@@ -35,7 +37,7 @@ cp /etc/elasticsearch/elasticsearch.yml /etc/elasticsearch/elasticsearch.yml.bak
 ```
 
 ```
-nano /etc/elasticsearch/elasticsearch.yml
+nano /etc/elasticsearch/elasticsearch.ynml
 ```
 
 ```
@@ -56,4 +58,34 @@ curl -X GET http://localhost:9200/ -v
 
 ```
 ss -tulnp | grep 9200
+```
+
+# Logstash
+
+```
+sudo dnf install --enablerepo=elasticsearch logstash
+```
+
+```
+mv /var/lib/logstash /data/logstash
+```
+
+```
+cp /etc/logstash/logstash.yml /etc/logstash/logstash.yml.bak
+```
+
+```
+nano /etc/logstash/logstash.yml
+```
+
+```
+nano /etc/logstash/jvm.options
+```
+
+```
+sudo systemctl enable --now logstash
+```
+
+```
+systemctl status logstash
 ```
