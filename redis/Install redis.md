@@ -71,6 +71,12 @@ Edit `ReadWriteDirectories=` from `ReadWriteDirectories=-/var/lib/redis` to `Rea
 nano /usr/lib/systemd/system/redis.service
 ```
 
+Edit `dir` from `dir /var/lib/redis` to `dir /data/redis`
+
+```
+nano /etc/redis/redis.conf
+```
+
 ```
 systemctl daemon-reload
 ```
