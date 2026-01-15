@@ -1,3 +1,9 @@
+### Install
+
+```
+dnf install httpd-tools
+```
+
 ### Create
 
 ```
