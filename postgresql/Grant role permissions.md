@@ -5,6 +5,20 @@ WHERE grantee = 'test';
 ```
 
 ```sql
+SELECT schemaname, matviewname, matviewowner
+FROM pg_catalog.pg_matviews
+WHERE has_table_privilege('test', format('%I.%I', schemaname, matviewname), 'SELECT')
+ORDER BY schemaname, matviewname;
+```
+
+```sql
+SELECT grantee, table_schema, table_name, privilege_type
+FROM information_schema.role_table_grants 
+WHERE grantee = 'test' AND table_name IN (SELECT table_name FROM information_schema.views)
+ORDER BY table_schema, table_name;
+```
+
+```sql
 SELECT rolname, rolsuper, rolcreaterole, rolcreatedb, rolcanlogin
 FROM pg_roles
 WHERE rolname = 'test';
