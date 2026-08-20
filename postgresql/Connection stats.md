@@ -4,7 +4,7 @@ SELECT
   current_setting('superuser_reserved_connections')::int     AS su_reserved,
   current_setting('reserved_connections')::int               AS reserved,   -- new in PG16
   count(*)                                                   AS current_total,
-  count(*) FILTER (WHERE backend_type = 'client backend')     AS client_conns,
+  count(*) FILTER (WHERE backend_type = 'client backend')    AS client_conns,
   current_setting('max_connections')::int
     - current_setting('superuser_reserved_connections')::int
     - current_setting('reserved_connections')::int
