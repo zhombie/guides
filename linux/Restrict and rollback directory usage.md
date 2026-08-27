@@ -64,6 +64,20 @@ install -d -o root -g root -m 0000 /home/centos/.claude-server
 chattr +i /home/centos/.claude-server
 ```
 
+# Restrict Copilot
+
+```shell
+rm -rf /home/centos/.copilot
+```
+
+```shell
+install -d -o root -g root -m 0000 /home/centos/.copilot
+```
+
+```shell
+chattr +i /home/centos/.copilot
+```
+
 # Rollback
 
 ```shell
